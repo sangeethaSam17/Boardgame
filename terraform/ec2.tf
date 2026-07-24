@@ -31,4 +31,5 @@ resource "aws_iam_instance_profile" "test_profile" {
 
 resource "aws_key_pair" "eks-manager" {
   key_name   = var.key_name
-  public_key = file(${path.module}/keys/eks-manager.pub)
+  public_key = file("${path.module}/keys/eks-manager.pub")
+}
