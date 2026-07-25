@@ -21,6 +21,8 @@ resource "aws_instance" "eks-manager" {
   key_name = aws_key_pair.eks-manager.key_name
   tags = {
     Name = var.instance_name
+    Role = "eks-manager"
+    Environment = "Dev"
   }
 
 }
